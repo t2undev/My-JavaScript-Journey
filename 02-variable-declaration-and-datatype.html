@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Types</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col bg-success text-dark font-weight-bold">
+        <h1 class=" text-center border-bottom">
+          Introduction to JavaScript Variable Declaration
+        </h1> 
+
+        
+        <h2>
+          What is a Variable?
+        </h2>
+        
+        <p>
+          A variable is a named storage that can hold a value. This value can be a number, a string (text), an array, an object, or any other data type. Think of a variable as a box with a label, where the label is the variable's name, and the box contains the data.
+        </p>
+        
+        <h3>
+          Declaring Variables
+        </h3>
+        
+        <p>
+          In JavaScript, you declare a variable using three keywords: `var`, `let`, and `const`. Each has its own specific use cases and rules.
+        </p>
+
+        <ol>
+          <li>
+            var
+            <br>
+            The `var` keyword is the oldest way to declare a variable. Variables declared with `var` are function-scoped, meaning they are only accessible within the function they are defined in. If declared outside any function, they are globally scoped.
+            <br>
+            Example.
+            <br>
+            <br>
+            var age = 25;
+            <br>
+            var name = "Alice";
+          </li>
+          <li>
+            let
+            <br>
+            The `let` keyword, introduced in ES6 (ECMAScript 2015), is block-scoped. This means the variable is only accessible within the block (e.g., `{}`) where it is declared. It is more predictable than `var` and helps avoid some common bugs.
+            <br>
+            Example
+            <br>
+            <br>
+            let age = 30;
+            <br>
+            let name = "Bob";
+          </li>
+          <li>
+            const
+            <br>
+            The `const` keyword is also block-scoped and is used to declare variables that are not meant to be reassigned after their initial assignment. This does not mean the value is immutable (unchangeable) if the value is an object or an array; you can still change the contents of the object or array, but you cannot reassign the `const` variable to a new value.
+            <br>
+            Example
+            <br>
+            <br>
+            const age = 35;
+            <br>
+            const name = "Charlie";
+          </li>
+        </ol>
+        
+       
+        
+       <h2>
+        Choosing Between `var`, `let`, and `const`
+       </h2> 
+        
+        <p>
+          - Use `const` when you want to ensure the variable's value does not get reassigned.
+          <br>
+          - Avoid `var` unless you need to support older JavaScript environments and understand its scoping behavior.
+          <br>
+          - Use `let` when you expect the variable's value to change.
+        </p>
+        
+      
+        <h1>
+          Summary
+        </h1>
+        
+        <p>
+          - `let` is block-scoped and is ideal for variables that may change.
+          <br>
+          - `const` is block-scoped and is used for variables that should not be reassigned.
+          <br>
+          <br>
+          As you continue to learn and practice JavaScript, understanding and using variable declarations properly will become second nature. Happy coding!
+          Welcome to the exciting world of JavaScript! As you begin your journey, one of the fundamental concepts you'll need to grasp is variable declaration. Variables are like containers that store data values which can be used and manipulated throughout your code.
+          <br>
+          <br>
+          - `var` is function-scoped and can lead to unexpected behavior.
+        </p>
+      </div>
+    </div>
+
+    <!--***************************************************** JavaScript Data Types ******************************************** -->
+    <div class="row">
+      <div class="col bg-success text-dark font-weight-bold">
+        <h1 class=" font-weight-bold mt-3 text-center border-bottom">JavaScript Data Types</h1>
+        <br>
+        <p>
+          One of the foundational concepts you need to grasp is data types. In JavaScript, data types are the building blocks of your code, allowing you to handle different kinds of data in various ways. Understanding these types is crucial for writing effective and efficient JavaScript code. Here's a quick introduction to get you started.
+        </p>
+        <br>
+        <h3>
+          1. Primitive Data Types
+        </h3>
+        <p>JavaScript has seven primitive data types, each representing a single value.</p>
+        <ol>
+          <li>
+            Number:
+            <br> 
+            Represents both integer and floating-point numbers.
+            <br>
+            For example:
+            <br>
+            <br>
+            let temperature = 98.6;
+            <br>
+            let age = 25;
+          </li>
+          <br>
+          <li>
+            String: 
+            <br>
+            Represents a sequence of characters, used for text. Strings can be enclosed in single quotes (' '), double quotes (" "), or backticks (``):
+            <br>
+            For Example
+            <br>
+            <br>
+            let greeting = 'Hello, world!';
+            <br>
+            let template = `Hello, ${name}!`;
+            <br>
+            let name = "Alice";
+          </li>
+          <br>
+          <li>
+            Boolean:
+            <br> 
+            Represents a logical entity and can have only two values: true or false:
+            <br>
+            For Example 
+            <br>
+            <br>
+            let isRaining = false;
+            <br>
+            let isJavaScriptFun = true;
+          </li>
+          <br>
+          <li>
+            Null: 
+            <br>
+            Represents the intentional absence of any object value. It's a primitive type that has only one value: null:
+            <br>
+            For Example 
+            <br>
+            <br>
+            let emptyValue = null;
+          </li>
+          <br>
+          <li>
+            Undefined: 
+            <br>
+            Represents an uninitialized variable or a missing value. A variable that has been declared but not assigned a value is undefined:
+            <br>
+            For Example 
+            <br>
+            <br>
+            let notAssigned;
+            <br>
+            console.log(notAssigned); // undefined
+          </li>
+          <br>
+          <li>
+            Symbol: 
+            <br>
+            Introduced in ES6, a Symbol is a unique and immutable primitive value, often used to identify object properties uniquely:
+            <br>
+            For Example 
+            <br>
+            <br>
+            let uniqueId = Symbol('id');
+          </li>
+          <br>
+          <li>
+            BigInt: 
+            <br>
+            Introduced in ES11, BigInt is used for representing integers that are too large to be represented by the Number type:
+            <br>
+            For Example 
+            <br>
+            let bigNumber = BigInt(123456789012345678901234567890);
+          </li>
+        </ol>
+
+        <br>
+        <h2>
+          2. Complex Data Type
+        </h2>
+        <ol>
+          <li>
+            Object: 
+            <br>
+            Unlike primitive data types, objects can store collections of data and more complex entities. Objects are fundamental in JavaScript for building structured data:
+            <br>
+            For Example 
+            <br>
+            <br>
+            let person = { <br>
+              name: "Alice", <br>
+              age: 25, <br>
+              isStudent: true <br>
+            };
+
+            <br>
+            Objects can also include functions (methods), which are actions that the object can perform:
+            <br>
+            For Example 
+            <br>
+            <br>
+            let calculator = { <br>
+              add: function(a, b) { <br>
+                  return a + b; <br>
+              } <br>
+              console.log(calculator.add(5, 3)); // 8
+            };
+          </li>
+          <li></li>
+        </ol>
+        <br>
+
+        <h3>
+          Understanding Type Coercion
+        </h3>
+        <p>
+          JavaScript is a dynamically typed language, meaning variables can hold values of any type without declaring their type explicitly. This flexibility can lead to type coercion, where JavaScript automatically converts values from one type to another. 
+          <br>
+          For example:
+          <br>
+          <br>
+          let sum = '5' - 3; // 2 (number subtraction)
+          <br>
+          let result = '5' + 3; // '53' (string concatenation)
+        </p>
+
+        <h2>
+          Checking Data Types
+        </h2>
+        <p>
+          To check the type of a variable, you can use the "typeof" operator:
+          <br>
+          Example 
+          <br>
+          <br>
+          console.log(typeof 'Hello'); // "string" <br>
+          console.log(typeof true); // "boolean" <br>
+          console.log(typeof null); // "object" (this is a well-known JavaScript quirk) <br>
+          console.log(typeof undefined); // "undefined" <br>
+          console.log(typeof Symbol('symbol')); // "symbol" <br>
+          console.log(typeof BigInt(1234567890)); // "bigint" <br>
+          console.log(typeof { name: 'Alice' }); // "object" <br>
+          console.log(typeof 42); // "number" 
+        </p>
+
+
+        <h1>
+          Conclusion
+        </h1>
+        <p>
+          Understanding JavaScript data types is essential as you start coding. They form the basis of how data is manipulated and interacted with in your applications. Take time to practice with each type, observe how they behave in different operations, and get comfortable with type coercion and type checking. Happy coding!
+        </p>
+
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class=" col bg-primary text-dark font-weight-bold">
+        <h1>We have 5 different types of data types</h1>
+        <p>1 Number data type</p>
+        <p>2 string data type</p>
+        <p>3 Array data type</p>
+        <p>4 Boolean data type</p>
+        <p>5 Object data type</p>
+
+      </div>
+    </div> -->
+  </div>
+
+
+
+  <script src="02-variable-declaration-and-datatype.js"></script>
+</body>
+</html>

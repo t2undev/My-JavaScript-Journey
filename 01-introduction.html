@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to JavaScript</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  <!-- There are two methods or ways we can add a javascript to our project.accordion
+  1 internal method
+  2 external method -->
+
+  <!-- 1 Internal method has to do with creating a javascript directly inside the project. this is done using a script tag inside the head tag of the html . -->
+  
+  <script>
+    <!-- alert("Welcome to JavaScript introductory class!"); -->
+  </script>
+  
+  
+  <!-- 2 External method has to do with creating a separate file for our JavaScript code and then import the file into our project using a script tag which is placed inside the head tag of the html.-->
+  
+  <!-- <script type="text/javascript" src="01-introduction.js"></script> -->
+
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col bg-success mt-2 border border-danger ">
+        <h1 class="mb-5 text-center border-bottom">Welcome to Javascript class where thinking has a big role to play</h1>
+
+        <h2>Introduction to JavaScript</h2>
+        <hr>
+
+        <h3>What is JavaScript?</h3>
+
+        <p>
+          JavaScript is a high-level, interpreted programming language. It's dynamic, meaning it can react to events, validate data, and create interactive elements on web pages. Initially designed to bring interactivity to websites, JavaScript has evolved significantly and now powers everything from server-side applications (with Node.js) to mobile apps (with frameworks like React Native).
+        </p>
+
+        <br>
+
+        <h3>Key Features of JavaScript</h3>
+          <br>
+          
+          <p>
+            1. Client-Side Scripting: 
+            <br>
+            JavaScript is primarily used for client-side development, enabling interactive web pages by manipulating the Document Object Model (DOM) 
+          </p>
+
+          <br>
+
+          <p>
+            2. Server-Side Scripting: 
+            <br>
+            With the advent of Node.js, JavaScript can also be used for server-side programming, allowing you to write server-side logic in the same language you use for client-side scripts.
+          </p>
+
+          <br>
+
+          <p>
+            3. Asynchronous Programming: 
+            <br>
+            JavaScript supports asynchronous operations, making it excellent for handling tasks like fetching data from an API without blocking the main thread.
+          </p>
+
+          <br>
+
+          <p>
+            4. Event-Driven: 
+            <br>
+            JavaScript can respond to user actions such as clicks, form submissions, and keyboard inputs, providing a dynamic user experience.
+          </p>
+
+          <br>
+
+          <p>
+            5. Wide Community and Ecosystem: 
+            <br>
+            JavaScript has a vast ecosystem with numerous libraries and frameworks (like React, Angular, and Vue.js) that make development faster and easier.
+          </p>
+
+          <br>
+          
+          <h3>
+            Basic Concepts
+          </h3>
+          
+          <p>
+            1. Syntax: JavaScript syntax includes 
+            <br>
+
+            <ul>
+              <li>variables</li>
+              <li>control structures (if-else, loops)</li>
+              <li>functions</li>
+              <li>objects</li>
+            </ul>
+            <br>
+            Familiarize yourself with basic syntax and conventions.
+            operators, 
+          </p>
+          
+          
+          <p>
+            2. DOM Manipulation: 
+            <br>
+            JavaScript can interact with and manipulate the HTML and CSS of a webpage. This allows you to dynamically change the content, structure, and style of a web page.
+          </p>
+          
+
+          <p>
+            3. Events: 
+            <br>
+            Learn how to handle events like clicks, mouse movements, and form submissions.
+          </p>
+          
+          
+          <p>
+            4. ES6 and Beyond: 
+            <br>
+            JavaScript is continually evolving. ES6 (ECMAScript 2015) introduced many features like 
+            <ul>
+              <li>
+                let/const.
+                <br>
+                for variable declaration
+              </li>
+              <li>
+                Arrow functions.
+                <br>
+                A shorter way to write a function
+              </li>
+              
+              <li>
+                template literals.
+                <br>
+                A better method of concatenation using backtick ``
+              </li>
+              <li>
+                classes.
+              </li>
+            </ul> 
+            Familiarize yourself with these modern features.
+          </p>
+          
+          <br>
+
+          <h1>
+            Getting Started
+          </h1>
+          <hr>
+          
+          <p>
+            1. Environment Setup: 
+            <br>
+            You only need a web browser to start coding in JavaScript. For more advanced development, install Node.js and a code editor like Visual Studio Code.
+          </p>
+
+          <br>
+
+          <p>
+            2. Learning Resources: 
+            <br>
+            Utilize online resources such as MDN Web Docs, W3Schools, and freeCodeCamp to learn JavaScript fundamentals and beyond.
+          </p>
+          
+          <p>
+            3. Practice: 
+            <br>
+            Start with small projects. Modify existing web pages, build simple applications, and progressively take on more complex projects.
+          </p>
+          
+          <h1>
+            Conclusion
+          </h1> 
+          <hr>
+          <p>
+            JavaScript is an incredibly versatile and essential language for modern web development. By understanding its core concepts and leveraging its features, you can create dynamic and interactive web applications. Start with the basics, practice regularly, and gradually explore its vast ecosystem of tools and frameworks. Happy coding!
+            Welcome to the world of JavaScript, a versatile and powerful programming language that plays a crucial role in web development. Whether you're planning to create interactive websites, develop server-side applications, or dive into mobile app development, JavaScript is an essential tool to have in your toolkit. Here’s a brief introduction to get you started.
+          </p>
+
+          <br>
+
+
+        <p>
+          we want the button bellow to call the function greet we created immediately a user click the button. And to do this we are going to use an something called "EVENT LISTENER" in javascript using an inbuilt function called "onclick" which listen to the click event of the button
+        </p>
+        
+        <button class="btn btn-lg btn-light font-weight-bold mb-2 rounded-pill btn-outline-danger" onclick="greet()">Click to see greetings message</button>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <h1 class=" text-center">Dom manipulation</h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 mx-auto bg-info mb-5">
+
+        <div>
+          <h1 class=" text-center my-2 border-bottom">Age Calculator</h1>
+        </div>
+        <div>
+          <input type="number" class=" form-control py-4 w-25 mx-auto" placeholder="Enter your birth year" id="userInput">
+        </div>
+        <button class=" btn btn-warning btn-lg rounded-pill d-flex my-2 mx-auto" onclick="calculateBirthYear()">Calculate birth year</button>
+        <div>
+          <p class="text-center text-white font-weight-bolder" id="displayAge"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 mx-auto bg-dark text-white mb-5">
+
+        <div>
+          <h1 class=" text-center my-2 border-bottom">Display Users name on the Screen</h1>
+        </div>
+        <div>
+          <input type="text" class=" form-control py-4 w-25 mx-auto" placeholder="Enter your your name" id="userInp">
+        </div>
+        <button class=" btn btn-warning btn-lg rounded-pill d-flex my-2 mx-auto" id="btn">Click to display name</button>
+        <div>
+          <p class="text-center text-white font-weight-bolder" id="displayUserName">My name is <span id="concatenate"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script type="text/javascript" src="01-introduction.js"></script>
+</body>
+</html>

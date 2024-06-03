@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Event listeners</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-success border border-danger">
+          <h1 class=" text-center">What are JavaScript Event Listeners?</h1>
+          <hr>
+
+          <p>
+            JavaScript event listeners are functions that wait for specific
+            events to happen on a webpage, such as a user clicking a button,
+            typing in a text field, or hovering over an element. When these
+            events occur, the event listener executes a predefined action or
+            function.
+          </p>
+
+          <h3>Why Are Event Listeners Needed?</h3>
+
+          <p>
+            Event listeners are crucial because they enable interactivity in web
+            applications. Without them, a webpage would be static and
+            unresponsive to user actions. Event listeners allow developers to
+            define how their applications should respond to user inputs and
+            interactions.
+          </p>
+
+          <h3>Why Are Event Listeners Important?</h3>
+
+          <ol>
+            <li>
+              Interactivity
+              <br />
+              They allow users to interact with web applications, making them
+              dynamic and engaging.
+            </li>
+            <li>
+              User Experience
+              <br />
+              They improve the user experience by providing immediate feedback
+              and actions in response to user events.
+            </li>
+            <li>
+              Separation of Concerns
+              <br />
+              They help keep JavaScript code organized by separating event
+              handling logic from other logic
+            </li>
+          </ol>
+
+          <h3>What Are Event Listeners Used For?</h3>
+
+          <p>
+            Event listeners are used for a wide range of interactions, such as:
+          </p>
+
+          <ul>
+            <li>Clicking a button to submit a form.</li>
+            <li>Hovering over a menu to display a dropdown.</li>
+            <li>Typing in a search box to filter results.</li>
+            <li>Dragging and dropping items.</li>
+            <li>Scrolling a page to load more content.</li>
+          </ul>
+
+          <h1>How to Use Event Listeners?</h1>
+
+          <p>
+            To use an event listener, you attach it to a DOM (Document Object
+            Model) element, specifying the event type you're interested in and
+            the function that should be called when that event occurs.
+          </p>
+
+          <b> Here's a basic syntax example: </b>
+
+          <p>element.addEventListener(event, function, useCapture);</p>
+
+          <ul>
+            <li>
+              element:
+              <br />
+              The DOM element you want to attach the event to.
+            </li>
+            <li>
+              event:
+              <br />
+              The type of event (e.g., "click", "mouseover", "keydown").
+            </li>
+            <li>
+              function:
+              <br />
+              The function to be executed when the event occurs.
+            </li>
+            <li>
+              useCapture:
+              <br />
+              An optional boolean parameter that specifies whether the event
+              should be captured or bubbled (default is false).
+            </li>
+          </ul>
+          <br />
+          <br />
+          <br />
+
+          <p>
+            <u> Relatable Example </u>
+            <br />
+            <br />
+            Let's consider a simple example to illustrate how event listeners
+            work. Imagine you have a button on a webpage, and you want something
+            to happen when you click it, like showing an alert message.
+          </p>
+
+          <div>
+            <p>Check the javascript file to see the code</p>
+            <br />
+            <button class="btn btn-danger" id="myButton">Click Me!</button>
+          </div>
+          <br />
+          <b>
+            <u> In this example: </u>
+          </b>
+
+          <br />
+          <p>
+            1. Select the Button:
+            <br />
+            We select the button element using "document.getElementById".
+            <br />
+            2. Define the Function:
+            <br />
+            We define a function "handleClick" that shows an alert when called.
+            <br />
+            3. Attach the Event Listener:
+            <br />
+            We use "addEventListener" to attach the "handleClick" function to
+            the button, specifying that it should run when the button is
+            clicked.
+          </p>
+
+          <br />
+          <br />
+
+          <p>
+            <u> More Complex Example </u>
+            <br />
+            <br />
+            Now, let's say you want to change the color of a div when the mouse
+            hovers over it and revert it back when the mouse leaves.
+          </p>
+
+          <br />
+          Check the javascript file to see the code.
+          <br />
+          <br />
+
+          <div id="colorBox" style="width: 100px; height: 100px; background-color: lightblue"></div>
+          <br />
+
+          <b>
+            <u> In this example: </u>
+          </b>
+          <p>
+            1. Select the Div:
+            <br />
+            We select the div element.
+            <br />
+            <br />
+            2. Define Functions:
+            <br />
+            We define `changeColor` and `revertColor` functions to change the
+            background color.
+            <br />
+            <br />
+            3. Attach Event Listeners:
+            <br />
+            We attach `mouseover` and `mouseout` events to change and revert the
+            color when the mouse enters and leaves the div.
+          </p>
+
+          <h3>
+            <u>difference between innerHTML and innerText write</u>
+          </h3>
+          <u>innerText will render the text including the <b></b> tag as text</u>
+          <p id="pp"></p>
+          <br>
+          <u>innerHTML will render the text and then the <b></b> tag as a html bold tag</u>
+          <p id="p"></p>
+          <br>
+          <br>
+
+          <h1>Conclusion</h1>
+
+          <p>
+            Event listeners are a fundamental part of making web pages
+            interactive and responsive to user actions. By understanding how to
+            use them, you can create rich, dynamic experiences on your website.
+            Remember, they help keep your code organized and your web
+            applications engaging and user-friendly.
+          </p>
+
+          <br />
+
+          <h1>
+            JavaScript provides several types of event listeners to handle
+            various user interactions and system events. Here are the main
+            categories and examples of event listeners:
+          </h1>
+          <br />
+          <h2>
+            <u>Mouse Events:</u>
+          </h2>
+
+          <ul>
+            <li>click</li>
+            <li>dblclick</li>
+            <li>mousedown</li>
+            <li>mouseup</li>
+            <li>mouseover</li>
+            <li>mousemove</li>
+            <li>mouseout</li>
+            <li>mouseenter</li>
+            <li>mouseleave</li>
+            <li>contextmenu</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Keyboard Events:</u>
+          </h2>
+
+          <ul>
+            <li>keydown</li>
+            <li>keypress</li>
+            <li>keyup</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Form Events:</u>
+          </h2>
+
+          <ul>
+            <li>submit</li>
+            <li>change</li>
+            <li>input</li>
+            <li>focus</li>
+            <li>blur</li>
+            <li>reset</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Window Events:</u>
+          </h2>
+
+          <ul>
+            <li>load</li>
+            <li>resize</li>
+            <li>scroll</li>
+            <li>unload</li>
+            <li>beforeunload</li>
+            <li>hashchange</li>
+            <li>popstate</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Clipboard Events:</u>
+          </h2>
+
+          <ul>
+            <li>cut</li>
+            <li>copy</li>
+            <li>paste</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Drag and Drop Events:</u>
+          </h2>
+
+          <ul>
+            <li>drag</li>
+            <li>dragstart</li>
+            <li>dragend</li>
+            <li>dragenter</li>
+            <li>dragover</li>
+            <li>dragleave</li>
+            <li>drop</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Media Events:</u>
+          </h2>
+
+          <ul>
+            <li>play</li>
+            <li>pause</li>
+            <li>ended</li>
+            <li>volumechange</li>
+            <li>timeupdate</li>
+            <li>seeked</li>
+            <li>seeking</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Pointer Events:</u>
+          </h2>
+
+          <ul>
+            <li>pointerdown</li>
+            <li>pointerup</li>
+            <li>pointermove</li>
+            <li>pointerover</li>
+            <li>pointerout</li>
+            <li>pointerenter</li>
+            <li>pointerleave</li>
+            <li>pointercancel</li>
+          </ul>
+
+
+          <br />
+          <h2>
+            <u>Touch Events (for mobile devices):</u>
+          </h2>
+
+          <ul>
+            <li>touchstart</li>
+            <li>touchmove</li>
+            <li>touchend</li>
+            <li>touchcancel</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Wheel and Scroll Events:</u>
+          </h2>
+
+          <ul>
+            <li>wheel</li>
+            <li>scroll</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Animation and Transition Events:</u>
+          </h2>
+
+          <ul>
+            <li>animationstart</li>
+            <li>animationend</li>
+            <li>animationiteration</li>
+            <li>transitionstart</li>
+            <li>transitionend</li>
+            <li>transitionrun</li>
+          </ul>
+
+
+          <br />
+          <h2>
+            <u>Focus and Blur Events:</u>
+          </h2>
+
+          <ul>
+            <li>focus</li>
+            <li>blur</li>
+            <li>focusin</li>
+            <li>focusout</li>
+          </ul>
+
+          <br />
+          <h2>
+            <u>Custom Events:</u>
+          </h2>
+
+          <p>
+            Custom events can be created and listened for using the CustomEvent interface.
+          </p>
+
+          <br />
+          <h2>
+            <u>Other Events:</u>
+          </h2>
+
+          <ul>
+            <li>error</li>
+            <li>abort</li>
+            <li>contextmenu</li>
+            <li>DOMContentLoaded</li>
+            <li>readystatechange</li>
+          </ul>
+
+          <br />
+
+
+
+
+
+          <h1>
+            Here is explanation for 30 JavaScript event listeners that you can use to handle
+            various events in web development:
+          </h1>
+
+          <ol>
+            <li>
+              <u><b>click:</b></u>
+              <br />
+              Fired when an element is clicked
+            </li>
+            <li>
+               <u><b>dblclick:</b></u>
+              <br />
+              Fired when an element is double-clicked.
+            </li>
+            <li>
+              <u><b>mousedown:</b></u>
+              <br />
+              Fired when a mouse button is pressed down on an element.
+            </li>
+            <li>
+              <u><b>mouseup:</b></u>
+              <br />
+              Fired when a mouse button is released over an element.
+            </li>
+            <li>
+              <u><b>mousemove:</b></u>
+              <br />
+              Fired when the mouse pointer is moving while it is over an
+              element.
+            </li>
+            <li>
+              <u><b>mouseover:</b></u>
+              <br />
+              Fired when the mouse pointer enters the element.
+            </li>
+            <li>
+              <u><b>mouseout:</b></u>
+              <br />
+              Fired when the mouse pointer leaves the element.
+            </li>
+            <li>
+              <u><b>mouseenter:</b></u>
+              <br />
+              Fired when the mouse pointer enters the element (does not bubble).
+            </li>
+            <li>
+              <u><b>mouseleave:</b></u>
+              <br />
+              Fired when the mouse pointer leaves the element (does not bubble).
+            </li>
+            <li>
+              <u><b>contextmenu:</b></u>
+              <br />
+              Fired when the right mouse button is clicked (context menu is
+              triggered).
+            </li>
+            <li>
+              <u><b>keydown:</b></u>
+              <br />
+              Fired when a key is pressed down.
+            </li>
+            <li>
+              <u><b>keyup:</b></u>
+              <br />
+              Fired when a key is released.
+            </li>
+            <li>
+              <u><b>keypress:</b></u>
+              <br />
+              Fired when a key is pressed down (deprecated).
+            </li>
+            <li>
+              <u><b>focus:</b></u>
+              <br />
+              Fired when an element gains focus.
+            </li>
+            <li>
+              <u><b>blur</b></u>
+              <br />
+              Fired when an element loses focus.
+            </li>
+            <li>
+              <u><b>input:</b></u>
+              <br />
+              Fired when the value of an "input", "textarea", or "select"
+              element is changed.
+            </li>
+            <li>
+              <u><b>change:</b></u>
+              <br />
+              Fired when the value of an "input", "textarea", or "select"
+              element is changed and the element loses focus.
+            </li>
+            <li>
+              <u><b>submit:</b></u>
+              <br />
+              Fired when a form is submitted.
+            </li>
+            <li>
+              <u><b>reset:</b></u>
+              <br />
+              Fired when a form is reset.
+            </li>
+            <li>
+              <u><b>select:</b></u>
+              <br />
+              Fired when some text in an "input" or "textarea" is selected.
+            </li>
+            <li>
+              <u><b>scroll:</b></u>
+              <br />
+              Fired when the document view or an element with a scrollbar is
+              scrolled.
+            </li>
+            <li>
+              <u><b>resize:</b></u>
+              <br />
+              Fired when the document view (window) is resized.
+            </li>
+            <li>
+              <u><b>load:</b></u>
+              <br />
+              Fired when the whole page has loaded, including all dependent
+              resources such as stylesheets and images.
+            </li>
+            <li>
+              <u><b>unload:</b></u>
+              <br />
+              Fired when the document or a child resource is being unloaded.
+            </li>
+            <li>
+              <u><b>error:</b></u>
+              <br />
+              Fired when a resource failed to load.
+            </li>
+            <li>
+              <u><b>drag:</b></u>
+              <br />
+              Fired when an element or text selection is being dragged.
+            </li>
+            <li>
+              <u><b>dragstart:</b></u>
+              <br />
+              Fired when the user starts dragging an element or text selection.
+            </li>
+            <li>
+              <u><b>dragend:</b></u>
+              <br />
+              Fired when a drag operation ends (such as releasing a mouse button
+              or hitting the escape key).
+            </li>
+            <li>
+              <u><b>dragover:</b></u>
+              <br />
+              Fired when an element or text selection is being dragged over a
+              valid drop target.
+            </li>
+            <li>
+              <u><b>drop:</b></u>
+              <br />
+              Fired when an element or text selection is dropped on a valid drop
+              target.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="04-event-listeners.js"></script>
+  </body>
+</html>

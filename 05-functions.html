@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript functions</title>
+  </head>
+
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  crossorigin="anonymous"
+></script>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Introduction to JavaScript Functions</h1>
+          <hr />
+          <p>
+            JavaScript functions are fundamental building blocks in programming,
+            enabling code reusability, modularity, and organization. 
+            <br>
+            Let’s delve
+            into what functions are, why they are essential, and how to use them
+            effectively.
+          </p>
+
+          <h3><u>What is a Function?</u></h3>
+          <br />
+          <p>
+            A function in JavaScript is a block of code designed to perform a
+            specific task. 
+            <br>
+            It can take inputs (parameters), process them, and
+            return an output. 
+            <br>
+            Functions are defined once and can be called (or
+            invoked) multiple times throughout a program.
+          </p>
+          <br /><br />
+          <h3>Why are Functions Needed?</h3>
+
+          <p>
+            1. <b><u>Reusability:</u></b>
+            <br />
+            Write once, use multiple times. Functions allow you to define a
+            piece of logic once and reuse it wherever needed.
+            <br />
+            <br />
+            2. <b><u>Modularity:</u></b>
+            <br />
+            Break down complex problems into smaller, manageable pieces. This
+            makes code easier to read, understand, and maintain.
+            <br />
+            <br />
+            3. <b><u>Maintainability:</u></b>
+            <br />
+            Changes made to a function affect all the places where it is used,
+            making updates more efficient.
+            <br />
+            <br />
+            4. <b><u>Abstraction:</u></b>
+            <br />
+            Hide the complexity and expose only the necessary details, making it
+            easier to work with the code.
+          </p>
+
+          <h3>Why are Functions Important?</h3>
+
+          <p>
+            1. <b><u>Efficiency: </u></b>
+            <br />
+            Avoid repetition of code, reducing errors and the size of the
+            codebase.
+            <br />
+            <br />
+
+            2. <b><u>Organization:</u></b>
+            Group related code together, making the program more structured.
+            <br />
+            <br />
+            3. <b><u>Testing:</u></b>
+            <br />
+            Functions can be tested independently, ensuring each part of the
+            code works correctly.
+            <br />
+            <br />
+
+            4. <b><u>Scope Management:</u></b>
+            Functions help manage variable scope, reducing the risk of variable
+            name conflicts and unintended side effects.
+          </p>
+
+          <h3>What are Functions Used For?</h3>
+
+          <p>
+            1. <b><u>Calculations:</u></b>
+            <br />
+            Perform mathematical operations or process data.
+            <br />
+            <br />
+            2. <b><u>Event Handling:</u></b>
+            <br />
+            Respond to user actions like clicks, key presses, or form
+            submissions.
+            <br />
+            <br />
+
+            3. <b><u>API Interactions:</u></b>
+            <br />
+            Fetch data from servers or services.
+            <br />
+            <br />
+
+            4. <b><u>Utility Operations:</u></b>
+            <br />
+            Provide common utility operations like formatting dates, sorting
+            arrays, or manipulating strings.
+          </p>
+
+          <h3>How to Use Functions in JavaScript</h3>
+          <br />
+          <p>
+            1. <b><u>Function Declaration</u></b>
+            <br />
+            This is the most common way to define a function.
+            <br />
+            <br />
+            function greet(name){
+            <br />
+            return `Hello, ${name}!
+            <br />
+            }
+            <br />
+            <br />
+            console.log(greet("Alice")); // Output: Hello, Alice!
+          </p>
+
+          <hr />
+
+          <p>
+            2.<b><u>Function expression</u></b>
+            <br />
+            Functions can also be defined as expressions and assigned to
+            variables.
+            <br />
+            <br />
+            const greet = function(name) {<br />
+            return `Hello, ${name}!`;<br />
+            };
+            <br /><br />
+            console.log(greet("Bob")); // Output: Hello, Bob!
+          </p>
+
+          <p>
+            3.<b><u>Arrow Function</u></b>
+            <br />
+            A shorter syntax for writing functions, introduced in ES6.
+            <br />
+            <br />
+            const greet = (name) => `Hello, ${name}!`; <br /><br />
+            console.log(greet("Charlie")); // Output: Hello, Charlie!
+          </p>
+
+          <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+          <h3>Relatable Examples</h3>
+
+          <p>
+            Example 1: Simple Calculator
+
+            <br />
+            <br />
+            Imagine you are building a simple calculator. Instead of writing the
+            logic for addition, subtraction, multiplication, and division
+            repeatedly, you can define functions for each operation.
+
+            <br /><br />
+            function add(a, b) { return a + b; }
+
+            <br /><br />
+            function subtract(a, b) { return a - b; }
+            <br /><br />
+            function multiply(a, b) { return a * b; }
+            <br /><br />
+            function divide(a, b) { if (b === 0) { return "Error: Division by
+            zero"; } return a / b; }
+            <br /><br />
+          </p>
+          console.log(add(5, 3)); // Output: 8 <br />
+          console.log(subtract(5, 3)); // Output: 2 <br />
+          console.log(multiply(5, 3)); // Output: 15 <br />
+          console.log(divide(5, 3)); // Output: 1.666... <br />
+
+          <p>
+            Example 2: Event Handler
+            <br /><br />
+            Consider a web page with a button. You want to show an alert when
+            the button is clicked.
+            <br /><br />
+
+            <button id="myButton" class="btn btn-info btn-group-lg">Click Me!</button>
+            <br /><br />
+            function showAlert() { <br />
+            alert("Button was clicked!"); <br />
+            }
+            <br /><br />
+
+            document.getElementById("myButton").addEventListener("click",
+            showAlert);
+          </p>
+
+          <h3>Additional Tips</h3>
+
+          <p>
+            1. <b><u>Default Parameters:</u></b>
+            <br />
+            Provide default values for function parameters.
+            <br /><br />
+
+            function greet(name = "Guest") {  <br>
+              return `Hello, ${name}!`; <br>
+            }
+
+            <br /><br />
+
+            console.log(greet()); // Output: Hello, Guest!
+          </p>
+
+          <p>
+            2. <b><u>Rest Parameters:</u></b> <br /><br />
+            Handle an indefinite number of arguments as an array.
+            <br /><br />
+            function sum(...numbers) {  <br>
+              return numbers.reduce((acc, num) => acc +num, 0); <br>
+            }
+
+            <br /><br />
+            console.log(sum(1, 2, 3, 4)); // Output: 10
+          </p>
+
+          <p>
+            3. <b><u>Anonymous Functions:</u></b> <br /><br />
+            Functions without a name, often used as arguments to other
+            functions.
+            <br /><br />
+            setTimeout(function() { <br>
+              console.log("This message is displayed after2 seconds"); <br>
+            }, 2000);
+            <br /><br />
+          </p>
+
+          <p>
+            4. <b><u>IIFE (Immediately Invoked Function Expression):</u></b>
+            <br /><br />
+            Functions that run as soon as they are defined.
+            <br /><br />
+            (function() { 
+              console.log("This is an IIFE"); 
+            })();
+            <br /><br />
+          </p>
+          <br /><br />
+
+          <h3>
+            <u> Conclusion </u>
+          </h3>
+
+          <p>
+            JavaScript functions are indispensable tools that enhance code
+            quality by promoting reusability, modularity, and maintainability.
+            Understanding and utilizing functions effectively can significantly
+            improve your programming skills and enable you to build more robust
+            and efficient applications.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 mx-auto my-5 bg-info border border-light shadow h-50">
+          <div class="d-flex">
+            <span class="text-center text-light font-weight-bold my-3">
+              ChatBox
+            </span>
+            <span id="dpUser" class=" font-weight-bolder text-light ml-auto my-3">
+              Welcome
+            </span>
+          </div>
+          
+          
+          <div class="">
+
+            <input type="text" name="sms" id="sms" class=" form-control p-2 w-50 mx-auto mb-2" placeholder="Enter message">
+
+            <!-- <p id="displaySms" class=" font-weight-lighter text-light my-5"></p> -->
+            <div name="" id="displaySms" class=" w-50 mx-auto  text-light" disabled></div>
+
+            <button type="button" id="submitBtn" class="btn btn-warning my-3 d-flex mx-auto">Send message</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class=" container-fluid ">
+      <div class="row">
+        <div class="col-5 shadow shadow-lg py-5 mx-auto">
+          <div>
+           <h1 class=" font-weight-bolder">Todo App</h1>
+        </div>
+      <div class="row">
+        
+        <div class=" col">
+          <input type="text" id="inp" class=" form-control p-2" placeholder="Enter Todo">
+        </div>
+        <div class="col-sm-4 col-lg-2 ml-lg-auto mr-lg-2">
+          <button id="btn" class="btn btn-success text-nowrap " onclick="addTodo()">Add Todo</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col border border-danger mr-3 mt-2 rounded ml-3" style=" height: 500px; overflow-y: auto;   ">
+          <div id="messageBox" class="shadow shadow-sm mt-2">
+            
+          </div>
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col">
+          <p id="numberOfTodo" class=" font-weight-bold mt-2"></p>
+        </div>
+
+        <div class="col-sm-4 col-lg-2 text-nowrap mr-lg-3 mt-2">
+          <button class="btn btn-danger" onclick="reset()">Reset Todo</button>
+        </div>
+
+      </div>
+    </div>
+        </div>
+      </div>
+      
+
+    <script type="text/javaScript" src="05-functions.js"></script>
+  </body>
+</html>
