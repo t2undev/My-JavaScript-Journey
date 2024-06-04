@@ -4,8 +4,235 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conditional Statement</title>
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  crossorigin="anonymous"
+></script>
 </head>
 <body>
-  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class=" text-center">
+          JavaScript conditional statements
+        </h1>
+
+        <hr>
+
+        <h2>
+          <u>
+            What are JavaScript Conditional Statements?
+          </u>
+        </h2>
+
+<p>
+  Imagine you're playing a game with your friends. You might have rules like, "If it's raining, we play indoors. <br>
+  If it's sunny, we play outside." In programming, conditional statements are like these rules. <br>
+  They let your code make decisions based on certain conditions.
+</p>
+<br>
+<br>
+
+<h3><u>Why are Conditional Statements Needed?</u></h3>
+
+<p>
+  Conditional statements are important because they allow your programs to make decisions. <br> 
+  Without them, your code would just do the same thing every time, no matter what. <br> 
+  But with conditional statements, your code can react differently based on different situations.
+</p>
+
+<br> 
+<br> 
+
+<h3>
+  <u>Why are They Important?</u>
+</h3>
+
+<p>
+They are important because they make your code flexible and powerful. Think about apps you use every day. They all use conditional statements to behave differently based on what you do or what data they have. 
+
+<u>
+  For example:
+</u>
+<br>
+- A weather app shows different information based on your location and the current weather.
+<br>
+- A game might show different levels or actions based on your score or choices.
+</p>
+
+<h3><u>What are They Used For?</u></h3>
+
+<p>
+  Conditional statements are used for:
+</p>
+<ul>
+  <li>Checking if certain conditions are true or false.</li>
+  <li>Making decisions and running different parts of your code based on these conditions.</li>
+  <li>Repeating actions until a certain condition is met.</li>
+</ul>
+
+
+<h2>How to Use Them</h2>
+
+<p>
+  In JavaScript, the most common conditional statement is the `if` statement. Let's look at how it works with some relatable examples.
+</p>
+
+<h4><u>The `if` Statement</u></h4>
+
+let weather = "sunny"; <br>
+
+if (weather === "sunny") { <br>
+  console.log("Let's play outside!"); <br>
+} <br>
+<p>
+  Here, the code checks if the `weather` variable is equal to "sunny". 
+  <br>
+  If it is, it prints "Let's play outside!" to the console.
+</p>
+<br>
+<br>
+
+
+<h4><u>The `if...else` Statement</u></h4>
+
+<p>
+  Sometimes, you want to do one thing if a condition is true, and something else if it's not.
+</p>
+
+
+let weather = "rainy"; <br>
+
+if (weather === "sunny") { <br>
+  console.log("Let's play outside!"); <br>
+} else { <br>
+  console.log("Let's play indoors."); <br>
+} <br>
+<p>
+  Now, if the weather is "sunny", it says to play outside. Otherwise, it says to play indoors.
+</p>
+
+<br>
+<br>
+
+<h4><u>The `else if` Statement</u></h4>
+
+<p>
+  You can also check multiple conditions using `else if`.
+</p>
+
+let weather = "cloudy"; <br><br>
+
+if (weather === "sunny") { <br>
+  console.log("Let's play outside!"); <br>
+} else if (weather === "cloudy") { <br>
+  console.log("Let's play board games inside."); <br>
+} else { <br>
+  console.log("Let's watch a movie indoors."); <br>
+} <br>
+<p>
+  Here, if the weather is "sunny", you play outside. If it's "cloudy", you play board games inside. Otherwise, you watch a movie indoors.
+</p>
+
+<br>
+<br>
+
+<h4><u>The `switch` Statement</u></h4>
+
+<p>
+  The switch statement is used for executing one block of code among many based on the value of an expression. 
+  <br>
+  When you have many conditions to check, a `switch` statement can be cleaner.
+</p>
+
+
+let weather = "cloudy"; <br><br>
+
+switch (weather) { <br>
+  case "sunny":<br>
+    console.log("Let's play outside!"); <br>
+    break; <br>
+  case "cloudy": <br>
+    console.log("Let's play board games inside."); <br>
+    break; <br>
+  case "rainy": <br>
+    console.log("Let's watch a movie indoors."); <br>
+    break; <br>
+  default: <br>
+    console.log("Let's stay in and read a book."); <br>
+} <br>
+
+<p>
+  Here, the `switch` statement checks the `weather` variable and runs the code for the matching case.
+</p>
+
+
+<h2>
+  Other Things to Know
+</h2>
+
+<p>
+  <b><u>1. Comparison Operators: </u></b>
+  <br>
+  These are used in conditions to compare values.<br>
+  <ul>
+    <li>`===` checks if two values are equal.</li>
+    <li>`!==` checks if two values are not equal.</li>
+    <li>`>` and `<` check if one value is greater than or less than another.</li>
+    <li>`>=` and `<=` check if one value is greater than or equal to, or less than or equal to another.</li>
+  </ul>
+
+</p>
+
+<p>
+  <b><u>2.Logical Operators:</u></b>
+  These are used to combine multiple conditions.
+  <ul>
+    <li>`&&` means "and". Both conditions must be true.</li>
+    <li>`||` means "or". At least one condition must be true.</li>
+    <li>`!` means "not". It inverts the condition.</li>
+  </ul>
+</p>  
+
+
+<h2>
+  <u>Example with Logical Operators</u>
+</h2>
+
+<br>
+let isWeekend = true;<br>
+let weather = "sunny";<br>
+<br>
+<br>
+if (isWeekend && weather === "sunny") {<br>
+  console.log("Let's go to the beach!");<br>
+} else {<br>
+  console.log("Let's stay home and relax.");<br>
+}<br>
+
+
+<p>
+  Here, you go to the beach only if it's the weekend and the weather is sunny.
+</p>
+
+<br>
+<br>
+
+<h1><u>Conclusion</u></h1>
+
+<p>
+JavaScript conditional statements are like the rules you use in games to decide what to do next. They make your code smarter and more flexible, allowing it to react to different situations and data. By understanding and using `if`, `else if`, `else`, and `switch` statements, along with comparison and logical operators, you can create programs that make decisions just like you do in real life!
+</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
