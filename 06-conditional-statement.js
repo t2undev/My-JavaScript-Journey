@@ -1,4 +1,7 @@
-JavaScript conditional statements 
+// JavaScript conditional statements 
+
+// let check if the JavaScript file is bind to the html file by alerting something
+alert('Connected to JavaScript')
 
 
 // How to Use Them
@@ -158,3 +161,77 @@ if (isWeekend && weatha === "sunny") {
 
 
 // Exercise
+
+
+
+// Given the following JavaScript code:
+
+
+// var i;
+for (let i = 1; i <= 100; i++){
+    console.log(i)
+}
+
+for(let i = 100; i > 0 & i <= 100; i--){
+  console.log(i);
+}
+
+
+// Modify the code so that it prints:
+// - "Wednesday" if the number is divisible by 3
+// - "Friday" if the number is divisible by 5
+// - "Tuesday" if the number is divisible by 2
+// - "Tues and Fri" if the number is divisible by both 2 and 5
+
+// If a number does not meet any of the above conditions, it should simply print the number itself.
+
+// Example Output
+
+// The modified code should produce an output similar to the following:
+
+
+// 1
+// Tuesday
+// 3
+// Tuesday
+// 5
+// Tuesday Wednesday
+// 7
+// Tuesday
+// 9
+// Tuesday Friday
+// 11
+// Tuesday Wednesday
+// 13
+// Tuesday
+// 15
+// Tues and Fri
+// ...
+
+
+// Additional Requirements
+// - Ensure that the condition for "Tues and Fri" is checked before the conditions for "Tuesday" and "Friday".
+// - Use `console.log()` to print the output for each number in the loop.
+
+
+
+// This exercise requires you to apply conditionals within a loop and understand the order of conditions to achieve the desired output.
+
+
+let i = 0;
+for (i = 0; i <=100; i++) {
+  console.log(i);
+
+  if (i % 3 === 0) {
+    console.log('wednesday');
+  }else if( i % 5 === 0){
+    console.log("Friday");
+  }else if( i % 3 & 1 % 5 === 0){
+    console.log((' no combination found'));
+  }else if( i % 2 === 0){
+    console.log('Tuesday');
+  }else{
+    console.log(i);
+  }
+  
+}
