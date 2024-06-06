@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Manipulation</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  <style>
+  #attr {
+    width: 900px;
+    height: 100px;
+    border: solid yellow 3px;
+    background-color: blue;
+    text-align: center;
+    font-size: small;
+  } 
+
+  #attr[box='specifications'] {
+    background-color: brown;
+    color: yellow !important;
+    border: thick solid blue;
+  }
+
+  #attr[cont="newValue"] {
+    background-color: greenyellow;
+    color: brown;
+    border: thick solid black !important;
+  }
+
+
+  .firstClass {
+    width: 900px;
+    height: 100px;
+    border: dotted black 3px;
+    background-color: white;
+    text-align: center;
+  }
+
+
+  .secondClass {
+    width: 900px;
+    height: 100px;
+    border: double blue 3px;
+    background-color: yellow;
+  }
+
+
+  
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">
+          JavaScript DOM Operation and Manipulation
+        </h1>
+        <hr>
+        
+        <h2><u>Introduction to the DOM</u></h2>
+        
+        <p>
+          The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as a tree of nodes. Understanding and manipulating the DOM is a key skill for any JavaScript developer.
+        </p>
+        
+        <h2>
+          <u>DOM Operations</u>
+        </h2>
+        
+        <p>
+          DOM operations can be grouped into several categories:
+        </p>
+        <ol>
+          <li>Accessing Elements</li>
+          <li>Creating Elements</li>
+          <li>Modifying Elements</li>
+          <li>Removing Elements</li>
+          <li>Event Handling</li>
+        </ol>
+        <br>
+        <br>
+       
+        <p>
+          Let's dive into each category with examples.
+        </p>
+        
+        <h2>
+          1. Accessing Elements
+        </h2>
+        
+        <p>
+          Accessing elements is the first step to manipulating the DOM. There are several methods to select elements in the DOM:
+        </p>
+        <br>
+        <ul>
+          <li>getElementById()</li>
+          <li>getElementsByClassName()</li>
+          <li>getElementsByTagName()</li>
+          <li>querySelector()</li>
+          <li>querySelectorAll()</li>
+        </ul>
+     
+        
+        <h3><u>Examples:</u></h3>
+        
+        <br>
+        <p>
+          //Select an element by ID <br>
+          const elementById = document.getElementById('myId');
+        </p>
+        <br>
+        <br>
+        <p>
+          // Select elements by class name
+          <br>
+        const elementsByClassName = document.getElementsByClassName('myClass');
+        </p>
+        <br>
+        <br>
+        <p>
+          // Select elements by tag name
+          <br>
+        const elementsByTagName = document.getElementsByTagName('div');
+        </p>
+
+        <br>
+        <br>
+
+        <p>
+          // Select the first element that matches a CSS selector
+          <br>
+        const elementBySelector = document.querySelector('.myClass');
+        </p>
+
+        <br>
+        <br>
+
+        <p>
+          // Select all elements that match a CSS selector
+          <br>
+        const elementsBySelectorAll = document.querySelectorAll('.myClass');
+        <br>
+        <br>
+        Importance: These methods allow you to locate specific elements or groups of elements within the DOM, which is the foundation of any DOM manipulation.
+        </p>
+     
+        <br>
+        <br>
+        
+        
+        <h2>
+          2. Creating Elements
+        </h2>
+        
+        <p>
+          Creating new elements dynamically is essential for adding new content to a webpage.
+          <br>
+          document.createElement()
+        </p>
+        
+     
+        
+        <h3><u>Example:</u></h3>
+        <br>
+        
+        <p>
+          // Create a new paragraph element
+          <br>
+        const newParagraph = document.createElement('p');
+        <br>
+        newParagraph.textContent = 'This is a new paragraph.';
+        <br>
+        document.body.appendChild(newParagraph);
+        <br>
+        <br>
+        Importance: This method allows you to create new elements that can be added to the DOM, enabling dynamic content generation.
+        </p>
+     
+        <br>
+        <br>
+        
+        
+        <h2>
+          3. Modifying Elements
+        </h2>
+        
+        <p>
+          Once you have accessed an element, you can modify it in various ways.
+        </p>
+        <ul>
+          <li>
+            element.innerHTML
+          </li>
+          <li>
+            element.textContent`
+          </li>
+          <li>element.setAttribute()</li>
+          <li>element.style</li>
+          <li>classList.add()</li>
+          <li>classList.remove()</li>
+          <li>classList.toggle()</li>
+        </ul>
+      <br><br>
+        <h3><u>Examples:</u></h3>
+        
+        
+        <p>
+          // Modify innerHTML or textContent
+          <br>
+        elementById.innerHTML = <br>
+        <span id="sample1" class=" bg-primary text-light font-weight-bolder"></span>
+        <br>
+        <br>
+        elementById.textContent =<br>
+        <span id="sample2" class=" bg-warning font-weight-bolder"></span>
+        </p>
+        
+        <br>
+        <p>
+          // Set an attribute using the setAttribute method
+          <br>
+          Syntax
+          <br>
+        elementById.setAttribute('data-custom', 'value');
+        </p>
+        <br>
+        <br>
+        Example
+        <br>
+        <div id="attr" class="container"> Setting attribute to an element using the DOM setAttribute() method.</div>
+        <br>
+        <br>
+        <button id="togleBtn" class="btn btn-secondary text-light p-2 btn-lg text-center d-flex mx-auto">Click To Change Attribute</button>
+        <br>
+        <br>
+        <p>
+          // Modify styles
+          <br>
+        elementById.style.color = 'red';
+        <br>
+        elementById.style.fontSize = '20px';
+        <br>
+        </p>
+        
+        <br>
+        <p>
+          // Modify classes
+          <br>
+        elementById.classList.add('newClass');
+        <br>
+        elementById.classList.remove('oldClass');
+        <br>
+        elementById.classList.toggle('toggleClass');
+        <br>
+        </p>
+
+        <br>
+        <br>
+        <b>Example</b>
+        <br>
+        <br>
+        <p>
+          how to modify the classes of an element using dom
+        </p>
+        <br>
+        <div class=" container">
+          <div class="row">
+            <div class="col">
+              <div id="mySec">Hello, World!</div>
+              <button id="addClassBtn" class="btn btn-lg p-2 btn-success">Add Class</button>
+              <button id="removeClassBtn" class="btn btn-lg p-2 btn-warning">Remove Class</button>
+              <button id="toggleClassBtn" class="btn btn-lg p-2 btn-primary">Toggle Class</button>
+            </div>
+          </div>
+        </div>
+       
+        
+        <br>
+        <p>
+          Importance: Modifying elements is crucial for updating the content, attributes, and styles of elements dynamically, enhancing the user experience.
+        </p>
+        
+        <br>
+        <br>
+        
+        
+        <h2>
+          4. Removing Elements
+        </h2>
+        
+        <p>
+          Sometimes, you need to remove elements from the DOM.
+          <br>
+          // to remove an element from the dom we can use     '.remove()'
+        </p>
+        
+       <br>
+       <br>
+        
+        <h3><u>Example:</u></h3>
+        
+        
+        <p>
+          lets Remove an element from the DOM using the .remove() method
+          
+        <br>
+        <div class=" mb-4">
+          <p id="pTag" class=" font-weight-bold font-italic my-3">Lets remove this element when a user click the remove element button</p>
+          <button id="rButton" class=" btn btn-danger p-2">Click To Remove Element</button>
+        </div>
+        <br>
+        Importance: Removing elements is important for managing the content displayed on the webpage, ensuring that outdated or irrelevant elements are no longer shown.
+        </p>
+        
+        <br>
+        <br>
+
+
+        <p>
+          To add an element to the DOM using JavaScript, you can use methods like <br>
+          createElement(), 
+          <br>
+          appendChild(),
+          <br>
+          insertBefore(). 
+          
+          Here's a step-by-step guide on how to create and add an element to the DOM.
+          <br>
+          <br>
+          <u>
+            Example
+          </u>
+          
+          Let's create a new <div> element and add it to the DOM.
+        </p>
+
+
+        <div id="container">Container</div>
+        <button class="btn btn-success p-2 my-3" id="addElementBtn">Click To Add Element</button>
+        
+        
+        <h2>
+          5. Event Handling
+        </h2>
+        
+        <p>
+          Event handling allows you to make your web pages interactive by responding to user actions.
+        </p>
+        
+        <p>
+          - addEventListener()
+          <br>
+          - removeEventListener()
+        </p>
+       <br>
+       <br>
+        
+        <h3><u>Example:</u></h3>
+        
+        <p>
+          // Add an event listener <br>
+        elementById.addEventListener('click', function() { <br>
+          alert('Element clicked!'); <br>
+        }); <br>
+        </p>
+         <br>
+        <p>
+          // Remove an event listener <br>
+        elementById.removeEventListener('click', function() { <br>
+          alert('Element clicked!'); <br>
+        }); <br>
+
+        <br>
+        Importance: Event handling is essential for creating interactive web pages. It allows you to execute code in response to user actions like clicks, mouse movements, key presses, and more.
+        </p>
+        <br>
+        <br>
+        
+        
+        <h1><u>Conclusion</u></h1>
+        
+        <p>
+          Understanding and manipulating the DOM is a fundamental skill in JavaScript development. By learning how to access, create, modify, and remove elements, as well as handle events, you can build dynamic and interactive web applications.
+        </p>
+        <br>
+        <br>
+
+        <h3><u>Summary of DOM Operations</u></h3>
+        
+        <p>
+          <u>
+            1. Accessing Elements
+          </u>
+          <br>
+        - getElementById() <br>
+        - getElementsByClassName() <br>
+        - getElementsByTagName() <br>
+        - querySelector() <br>
+        - querySelectorAll() <br>
+        </p>
+        <br>
+        <br>
+        
+        <p>
+          <u>2. Creating Elements</u>
+          <br>
+          <br>
+          document.createElement()
+        </p>
+       <br>
+       <br>
+        
+        <p>
+          <u>3.Modifying Elements</u>
+          <br>
+          <br>
+          - element.innerHTML / element.textContent <br>
+        - element.setAttribute() <br>
+        - element.style <br>
+        - classList.add(), classList.remove(), classList.toggle() <br>
+        </p> 
+         <br>
+         <br>
+        
+        <p>
+          <u>4.Removing Elements</u>
+          <br>
+          <br>
+          - element.remove()
+        </p>  
+        
+        
+        <p>
+          <u>5. Event Handling</u>
+          <br>
+          <br>
+          - addEventListener()
+        - removeEventListener()
+        </p>
+        <br>
+        
+        Mastering these operations will enable you to effectively manipulate the DOM and create rich, interactive web experiences.
+        
+        
+        
+        <br><br><br>
+        
+        <h2>
+          
+            Differences between <u>document.querySelector()</u> and <u>document.getElementById()</u>
+          
+        </h2>
+        <br>
+        <p>
+          In JavaScript, both `document.querySelector()` and `document.getElementById()` are used to select elements from the DOM (Document Object Model), but they have some differences in their functionality and usage.
+        </p>
+        
+        
+        
+         <h4><u>document.querySelector()</u></h4>
+         <p>
+           - Syntax: <br>
+            document.querySelector(selector)
+            <br>
+            <br>
+        - Parameters: 
+        <br>
+        A CSS selector string (e.g., `'#id'`, `'.class'`, `'tag'`, or a more complex CSS selector).
+        <br>
+        <br>
+        - Return Value: 
+        <br>
+        The first element that matches the specified CSS selector, or `null` if no matches are found.
+        <br>
+        <br>
+        - Flexibility: 
+        <br>
+        Can select any type of element based on its CSS selector. This makes it very versatile, as it can select elements by ID, class, tag name, attribute, and more.
+         </p>
+        
+       
+        <h3><u>Example Usage:</u></h3>
+        <br>
+        let element = document.querySelector('#myId'); // Selects an element with the ID 'myId'<br>
+        let element = document.querySelector('.myClass'); // Selects the first element with the class 'myClass'<br>
+        let element = document.querySelector('div'); // Selects the first <div> element<br>
+         <br> 
+         <br> 
+         
+         
+         <h4><u>document.getElementById()</u></h4>
+          
+          - Syntax: `
+          <br>
+          document.getElementById(id)`
+
+          <br>
+          <br>
+          - Parameters: 
+          <br>
+          A string representing the ID of the element to be selected.
+          <br>
+          <br>
+          - Return Value: 
+          <br>
+          The element with the specified ID, or `null` if no such element exists.
+          <br>
+          <br>
+          - Usage: 
+          <br>
+          Specifically used to select an element by its ID attribute. IDs are expected to be unique within a document, so this method returns a single element.
+          
+          
+          <h3><u>Example Usage:</u></h3>
+          <br><br>
+          let element = document.getElementById('myId'); // Selects the element with the ID 'myId'
+          
+          
+          <h2><u>Key Differences</u></h2> 
+          
+          <p>
+            1. Selector Type:
+            <br>
+            <br>
+          - document.querySelector(): uses a CSS selector, making it more versatile.<br>
+          - document.getElementById(): specifically targets elements by their ID.<br>
+          </p>
+          <br>
+          <br>
+          <p>
+            2. Return Value:
+            <br>
+            <br>
+          - document.querySelector(): returns the first matching element for the given CSS selector. <br>
+          - document.getElementById(): returns the element with the exact ID provided. <br>
+          </p>
+          <br>
+          <br>
+          <p>
+            3. Flexibility:
+            <br>
+            <br>
+          - document.querySelector(): can select elements based on various criteria (ID, class, tag name, attributes, etc.). <br>
+          - document.getElementById(): is limited to selecting elements by their ID. <br>
+          </p>
+           <br>
+           <br>
+          
+          <p>
+            4. Performance:
+            <br>
+            <br>
+          - document.getElementById() : is generally faster for selecting elements by ID, as it directly accesses the element. <br>
+          - document.querySelector() : may be slightly slower due to the need to parse the CSS selector, but the performance difference is usually negligible for most use cases. <br>
+          </p> 
+
+          <br>
+          <br>
+           Example Comparison
+          <br>
+          <div id="myId">This is a div with an ID.</div>
+          <div class="myClass">This is a div with a class.</div>
+            
+            In summary, use `document.getElementById()` when you need to quickly select an element by its unique ID, and use `document.querySelector()` when you need more flexibility in selecting elements based on various CSS selectors.
+          </div>
+        </div>
+      </div>
+
+      <script src="04-dom-manipulation.js"></script>
+    </body>
+    </html>
+   

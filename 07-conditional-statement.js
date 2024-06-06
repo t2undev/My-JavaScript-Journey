@@ -1,7 +1,7 @@
 // JavaScript conditional statements 
 
 // let check if the JavaScript file is bind to the html file by alerting something
-alert('Connected to JavaScript')
+// alert('Connected to JavaScript')
 
 
 // How to Use Them
@@ -170,11 +170,19 @@ if (isWeekend && weatha === "sunny") {
 // var i;
 for (let i = 1; i <= 100; i++){
     console.log(i)
+    // document.write(`${i} <br>`)
+    document.querySelector('#show').innerHTML += `${i} <br>`
 }
 
 for(let i = 100; i > 0 & i <= 100; i--){
   console.log(i);
+  // document.write(`${i} <br>`)
+  document.querySelector('#show2').innerHTML += `${i} <br>`
 }
+
+
+
+
 
 
 // Modify the code so that it prints:
@@ -224,14 +232,18 @@ for (i = 0; i <=100; i++) {
 
   if (i % 3 === 0) {
     console.log('wednesday');
+    document.write(`wednesday <br>`)
   }else if( i % 5 === 0){
     console.log("Friday");
+    document.write(`Friday <br>`)
   }else if( i % 3 & 1 % 5 === 0){
     console.log((' no combination found'));
+    document.write(`no combination found <br>`)
   }else if( i % 2 === 0){
     console.log('Tuesday');
+    document.write(`Tuesday <br>`)
   }else{
     console.log(i);
+    document.write(`${i} <br>`)
   }
-  
 }
