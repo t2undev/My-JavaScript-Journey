@@ -32,28 +32,28 @@
 
            <div class=" col-3 border border-primary">
             <div class=" my-2 d-flex">
-              <button class="btn btn-primary mx-auto">Balance</button>
+              <button class="btn btn-primary mx-auto" id="balButton">Balance</button>
             </div>
             
 
             <div style=" margin-top: 120px" class=" d-flex">
-              <button class="btn btn-warning my-2 mt-5 mx-auto">Deposit</button>
+              <button class="btn btn-warning my-2 mt-5 mx-auto" id="depoButton">Deposit</button>
             </div>
             
            </div>
            <div class="col-6 border border-primary p-1 mx-auto">
              <div class="card-header">
-               <p id="displayBalance" class=" font-weight-bold">Your account balance is: </p>
+               <p id="displayBalance" class=" font-weight-bold">Your current balance is # </p>
                <input
                  class="form-control p-2 my-3"
                  type="number"
-                 name=""
                  id="userInp"
+                 placeholder="Enter amount"
                />
              </div>
 
              <div class="card-body">
-              <table class=" table">
+              <table class=" table table-responsive">
                 <tr>
                   <div class="row">
                     <td><div class="col"><button class=" btn btn-dark rounded" id="">1</button></div></td>
@@ -78,9 +78,9 @@
                 </tr>
 
                 <tr>
-                  <td><div class="col"><button class=" btn btn-dark rounded" id=""></button></div></td>
+                  <td><div class="col"><button class=" btn btn-dark rounded disabled" id=""></button></div></td>
                   <td><div class="col"><button class=" btn btn-dark rounded" id="">0</button></div></td>
-                  <td><div class="col"><button class=" btn btn-dark rounded" id=""></button></div></td>
+                  <td><div class="col"><button class=" btn btn-dark rounded disabled" id=""></button></div></td>
                 </tr>
               </table>
               <hr>
@@ -104,6 +104,6 @@
       </div>
     </div>
 
-    <script src="simple_fintech_app.js"></script>
+    <script src="Simple_ATM_App.js"></script>
   </body>
 </html>
