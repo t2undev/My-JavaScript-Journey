@@ -90,8 +90,79 @@ transferBtn.addEventListener('click', function(){
     accountBalance -= transferAmount
   span.innerHTML = `Your current balance is #${accountBalance}`
 
-  alert(`${transferAmount} Has been debited from your account, your balance is #${accountBalance}`)
+  alert(`You have successfully transfer ${transferAmount} from your account to .....user. Your account balance is #${accountBalance}`)
   }
   document.getElementById('userInp').value = ''
   document.getElementById('userInp').focus()
 })
+
+
+function one(numberOne) {
+  // console.log(numberOne);
+  // console.log(typeof(numberOne));
+
+  var number1 = document.getElementById('userInp').value += numberOne;
+}
+
+function two(numberTwo) {
+  // console.log(numberTwo);
+  // console.log(typeof(numberTwo));
+
+  var number2 = document.getElementById('userInp').value += numberTwo;
+}
+
+function three(numberThree) {
+  // console.log(numberThree);
+  // console.log(typeof(numberThree));
+
+  var number3 = document.getElementById('userInp').value += numberThree;
+}
+
+function four(numberFour) {
+  // console.log(numberFour);
+  // console.log(typeof(numberFour));
+
+  var number4 = document.getElementById('userInp').value += numberFour;
+}
+
+function five(numberFive) {
+  console.log(numberFive);
+  console.log(typeof(numberFive));
+
+  var number5 = document.getElementById('userInp').value += numberFive;
+}
+
+function six(numberSix) {
+  // console.log(numberSix);
+  // console.log(typeof(numberSix));
+
+  var number6 = document.getElementById('userInp').value += numberSix;
+}
+
+function seven(numberSeven) {
+  // console.log(numberSeven);
+  // console.log(typeof(numberSeven));
+
+  var number7 = document.getElementById('userInp').value += numberSeven;
+}
+
+function eight(numberEight) {
+  // console.log(numberEight);
+  // console.log(typeof(numberEight));
+
+  var number8 = document.getElementById('userInp').value += numberEight;
+}
+
+function nine(numberNine) {
+  // console.log(numberNine);
+  // console.log(typeof(numberNine));
+
+  var number9 = document.getElementById('userInp').value += numberNine;
+}
+
+function zero(numberZero) {
+  // console.log(numberZero);
+  // console.log(typeof(numberZero));
+
+  var number0 = document.getElementById('userInp').value += numberZero;
+}
