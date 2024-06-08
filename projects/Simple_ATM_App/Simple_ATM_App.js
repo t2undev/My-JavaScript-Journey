@@ -2,22 +2,26 @@
 // alert('javascript is connected')
 
 let accountBalance = 50000
-// we want to add this ballance paragraph element diplaying the balance so we we need to get the element through the dom 
+// we want to add this balance paragraph element diplaying the balance so we we need to get the element through the dom 
 
 var userName = prompt('Enter your name')
+var accountNumber = prompt('Enter your 10 digit account number')
 
 document.getElementById('greeting').innerHTML = `Welcome back ${userName}`
+ 
+document.getElementById('accNumber').innerHTML =`Your account number is ${accountNumber}` 
 
 
 var span = document.getElementById('span')
-span.innerHTML = `${accountBalance}`
+span.innerHTML = `Click the balance button to display your available balance`
 
 
 
-var balButton = document.getElementById('balButton')
+var balanceBtn = document.getElementById('balanceBtn')
 
-balButton.addEventListener('click', function() {
-  console.log('hello world');
+balanceBtn.addEventListener('click', function() {
+  span.innerHTML = `Your Available balance = #${accountBalance}`
+ alert(`Your Available balance is #${accountBalance}`)
 
 })
 
@@ -33,14 +37,14 @@ depoButton.addEventListener('click', function(){
 
   if(!NaN && depositAmount > 0) {
     accountBalance += depositAmount
-  span.innerHTML = `${accountBalance}`
+  span.innerHTML = `Your current balance is #${accountBalance}`
   }else{
     alert('Deposit Amount must be greater than zero')
     
   }
   
   if(!NaN && depositAmount > 0) {
-    alert(`${depositAmount} Has been successfully added to your balance. your account ballance is #${accountBalance}`)
+    alert(`${depositAmount} Has been successfully added to your balance. your account balance is #${accountBalance}`)
   }
    
 
@@ -59,11 +63,11 @@ withdrawBtn.addEventListener('click', function(){
   if (!NaN && debitAmount <= 0) {
     alert(`Debit amount must be above #0 and must be less than #${accountBalance}`)
   }else if (!NaN && debitAmount > accountBalance) {
-    alert('Insufficient fund, the debit amount is above your available ballance ')
+    alert('Insufficient fund, the debit amount is above your available balance ')
   }else if (!NaN && debitAmount < accountBalance) {
     accountBalance -= debitAmount
-    span.innerHTML = `${accountBalance}`
-    alert(`${debitAmount} Has been debited from your account, your ballance is #${accountBalance}`)
+    span.innerHTML = `Your current balance is #${accountBalance}`
+    alert(`${debitAmount} Has been debited from your account, your balance is #${accountBalance}`)
   }
 
   userInpu = document.getElementById('userInp').value = ''
@@ -81,12 +85,12 @@ transferBtn.addEventListener('click', function(){
   if (!NaN && transferAmount <= 0) {
     alert(`transferAmount amount must be above #0 and must be less than #${accountBalance}`)
   }else if (!NaN && transferAmount > accountBalance) {
-    alert('Insufficient fund, the transferAmount is above your available ballance check your account balance and try again')
+    alert('Insufficient fund, the transferAmount is above your available balance check your account balance and try again')
   }else if (!NaN && transferAmount < accountBalance && accountBalance > 0) {
     accountBalance -= transferAmount
-  span.innerHTML = `${accountBalance}`
+  span.innerHTML = `Your current balance is #${accountBalance}`
 
-  alert(`${transferAmount} Has been debited from your account, your ballance is #${accountBalance}`)
+  alert(`${transferAmount} Has been debited from your account, your balance is #${accountBalance}`)
   }
   document.getElementById('userInp').value = ''
   document.getElementById('userInp').focus()
