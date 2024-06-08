@@ -57,7 +57,7 @@ withdrawBtn.addEventListener('click', function(){
   let debitAmount = Number(debit)
   // console.log(typeof(debitAmount));
   if (!NaN && debitAmount <= 0) {
-    alert('Debit amount must be above #0')
+    alert(`Debit amount must be above #0 and must be less than #${accountBalance}`)
   }else if (!NaN && debitAmount > accountBalance) {
     alert('Insufficient fund, the debit amount is above your available ballance ')
   }else if (!NaN && debitAmount < accountBalance) {
@@ -70,3 +70,24 @@ withdrawBtn.addEventListener('click', function(){
   userInpu = document.getElementById('userInp').focus()
 })
 
+
+var transferBtn = document.getElementById('transferBtn')
+transferBtn.addEventListener('click', function(){
+  var userInpu = document.getElementById('userInp').value
+  // console.log(typeof(userInpu));
+  let transferAmount = Number(userInpu)
+  // console.log(typeof(transferAmount));
+
+  if (!NaN && transferAmount <= 0) {
+    alert(`transferAmount amount must be above #0 and must be less than #${accountBalance}`)
+  }else if (!NaN && transferAmount > accountBalance) {
+    alert('Insufficient fund, the transferAmount is above your available ballance check your account balance and try again')
+  }else if (!NaN && transferAmount < accountBalance && accountBalance > 0) {
+    accountBalance -= transferAmount
+  span.innerHTML = `${accountBalance}`
+
+  alert(`${transferAmount} Has been debited from your account, your ballance is #${accountBalance}`)
+  }
+  document.getElementById('userInp').value = ''
+  document.getElementById('userInp').focus()
+})
