@@ -43,7 +43,9 @@
            </div>
            <div class="col-6 border border-primary p-1 mx-auto">
              <div class="card-header">
-               <p id="displayBalance" class=" font-weight-bold">Your current balance is #<span id="span"></span> </p>
+              <p id="greeting" class=" font-weight-bolder font-italic">  </p>
+              <small id="errorMessage"></small>
+              <p id="displayBalance" class=" font-weight-bold">Your current balance is #<span id="span"></span> </p>
                <input
                  class="form-control p-2 my-3"
                  type="number"
@@ -90,7 +92,7 @@
 
            <div class="col-3 border border-primary">
             <div class=" my-2 d-flex">
-              <button class="btn btn-danger mx-auto">Withdraw</button>
+              <button id="withdrawBtn" class="btn btn-danger mx-auto">Withdraw</button>
             </div>
 
             <div style=" margin-top: 120px" class=" d-flex">
