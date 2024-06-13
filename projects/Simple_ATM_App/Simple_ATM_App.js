@@ -51,7 +51,7 @@ depoButton.addEventListener('click', function(){
   userInpu = document.getElementById('userInp').value = ''
   userInpu = document.getElementById('userInp').focus()
 
-  
+  showHistory()
 })
 
 let withdrawBtn = document.getElementById('withdrawBtn')
@@ -72,6 +72,8 @@ withdrawBtn.addEventListener('click', function(){
 
   userInpu = document.getElementById('userInp').value = ''
   userInpu = document.getElementById('userInp').focus()
+
+  showHistory()
 })
 
 
@@ -94,6 +96,8 @@ transferBtn.addEventListener('click', function(){
   }
   document.getElementById('userInp').value = ''
   document.getElementById('userInp').focus()
+
+  showHistory()
 })
 
 
@@ -165,4 +169,35 @@ function zero(numberZero) {
   // console.log(typeof(numberZero));
 
   var number0 = document.getElementById('userInp').value += numberZero;
+}
+
+
+
+// i want to use my knowledge of arrays and object to add my features the the machine.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// let listOfUsers = [];
+
+// const array = new Uint32Array(1);
+// let user = {
+//   firstName: '',
+//   lastName: '',
+//   email: '',
+//   password: '',
+//   accountNumber: self.crypto.getRandomValues(array),
+// }
+
+
+
+let users = [];
+
+function showHistory() {
+  users.push(userName)
+  console.log(users);
+
+  for (let i = 0; i < users.length; i++) {
+    const userAtThatIndex = users[i];
+    console.log(userAtThatIndex);
+    document.getElementById('history').innerHTML = `${userAtThatIndex} performed so...so... transaction `
+    
+  }
 }

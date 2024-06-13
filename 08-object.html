@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Object</title>
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  crossorigin="anonymous"
+></script>
+</head>
+<body>
+  <div class=" container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center font-weight-bolder">
+          JavaScript objects.
+        </h1>
+        <hr>
+        <h3>
+          What is a JavaScript Object?
+        </h3> 
+        <p>
+          A JavaScript object is a collection of properties, where each property is an association between a key (or name) and a value. These values can be of any data type, including numbers, strings, functions, arrays, or even other objects. Objects in JavaScript are like real-world objects: they have properties and methods.
+        </p>
+
+        <h3>
+          Why are JavaScript Objects Needed?
+        </h3>
+
+
+        <p>
+          1. Organization: Objects allow you to group related data and functions together, making your code more modular and easier to understand.
+          <br>
+          2. Modeling Real-World Entities: Objects can model complex entities, like a person, car, or a game character, with their attributes and behaviors.
+          <br>
+          3. Flexibility: Objects can hold any data type and can be dynamically modified, making them very versatile.
+        </p>
+
+        <h3>
+          Importance of JavaScript Objects
+        </h3>
+
+        <p>
+          - Central to JavaScript: Many built-in features and functions of JavaScript are based on objects. For example, almost everything in JavaScript is an object, including arrays and functions.
+          <br>
+          - Enhanced Code Readability: Using objects makes your code more readable and maintainable by logically grouping related data and operations.
+          <br>
+          - Data Management: Objects help in managing and manipulating complex data structures more effectively.
+        </p>
+
+        <h3>
+          Use Cases of JavaScript Objects
+        </h3>
+
+        <p>
+          - Storing Data: Objects can be used to store and manage data in a structured way.
+          <br>
+          - Encapsulation: They encapsulate related data and functions, providing a clear structure.
+          <br>
+          - Configuration: Objects are often used for configuration settings in libraries and frameworks.
+          <br>
+          - Data Transfer: Objects are commonly used in APIs to send and receive data.
+        </p>
+        
+        
+        <h3>
+          Working with JavaScript Objects
+        </h3>
+        
+        <p>
+          <u>Creating an Object</u>
+        </p>
+        
+        
+        <p>
+          You can create an object in JavaScript using <u>object literal syntax or the `new Object()` syntax</u>.
+          <br>
+          <u>
+            Using object literal syntax
+          </u> 
+          <br>
+          let person = { <br>
+            name: "John",<br>
+            age: 30,<br>
+            greet: function() {<br>
+              console.log("Hello, my name is " + this.name);<br>
+            }<br>
+          };<br>
+        </p>
+        <p>
+          <u>Using the new Object() syntax</u>
+          <br>
+          <br>
+          let car = new Object();<br>
+          car.make = "Toyota";<br>
+          car.model = "Corolla";<br>
+          car.year = 2020;<br>
+          car.start = function() {<br>
+            console.log("The car is starting...");<br>
+          };<br>
+        </p>
+        
+        <h3>
+          Accessing Object Properties
+        </h3>
+
+        <p>
+          You can access object properties using <u>dot notation</u> or <u>bracket notation</u>.
+          <br>
+          <br>
+          console.log(person.name); // Dot notation
+          <br>
+          <br>
+          console.log(person["age"]); // Bracket notation
+        </p>
+        <br>
+        <br>
+        
+        <h3>
+          Object Methods
+        </h3>
+        
+        <br>
+        <p>
+          JavaScript provides several built-in methods to work with objects. Here are some key methods:
+        </p>
+        <br>
+        <p>
+          1. <b><u>Object.assign()</u></b>
+          <br>
+          <br>
+
+          - Use Case: Copies properties from one or more source objects to a target object.
+          <br>
+
+
+          <u>
+            <u>
+              Example:
+            </u>
+          </u>
+
+    
+          let target = { a: 1 };<br>
+          let source = { b: 2, c: 3 };<br>
+          Object.assign(target, source);<br><br>
+          console.log(target); // { a: 1, b: 2, c: 3 }<br>
+        </p>
+
+        <br>
+        <br>
+
+        <p>
+          2. <b><u>Object.create()</u></b>2. 
+          <br>
+          <br>
+          - Use Case: Creates a new object with a specified prototype.
+          <br>
+
+          <u>
+            Example:
+          </u>
+    
+          let proto = { greet: function() { console.log("Hello"); } };
+          let obj = Object.create(proto);
+          obj.greet(); // Hello
+        </p>
+
+        <br>
+        <br>
+        <p>
+          <b><u>3. Object.keys()</u></b>
+          <br>
+          <br>
+          - Use Case: Returns an array of the object's own property names.
+          <br>
+          <br>
+          <u>
+            Example:
+          </u>
+            let person = { name: "Alice", age: 25 };
+            <br>
+
+            console.log(Object.keys(person)); // ["name", "age"]
+        </p>
+        <br>
+        <br>
+
+
+        <p>
+          <b><u>4. Object.values()</u></b>
+          <br>
+          <br>
+
+          - Use Case: Returns an array of the object's own property values.
+          <br>
+          <br>
+          <u>
+            Example:
+          </u>
+          <br>
+    
+          let person = { name: "Alice", age: 25 };
+          <br>
+          console.log(Object.values(person)); // ["Alice", 25]
+        </p>
+        <br><br>
+
+        <p>
+          <b><u>5. Object.entries()</u></b>
+          <br><br>
+
+          - Use Case: Returns an array of the object's own key-value pairs.
+          <br><br>
+          <u>
+            Example:
+          </u> 
+    
+          let person = { name: "Alice", age: 25 };
+          <br>
+          console.log(Object.entries(person)); // [["name", "Alice"], ["age", 25]]
+        </p>
+
+        <br><br>
+
+        <p>
+          <b><u>6. Object.freeze()</u></b>
+          <br><br>
+          - Use Case: Freezes an object, preventing new properties from being added or existing properties from being modified.
+          <br><br>
+          <u>
+            Example:
+          </u>
+
+          <br>
+          <br>
+          let person = { name: "Alice" };<br>
+          Object.freeze(person);<br>
+          person.age = 30; // This will not work<br>
+          console.log(person); // { name: "Alice" }<br>
+        </p>
+        <br><br>
+
+        <p>
+          <b><u>7. Object.seal()</u></b>
+          <br><br>
+
+          - Use Case: Seals an object, preventing new properties from being added but allowing existing properties to be modified.
+          <br><br>
+          <u>
+            Example:
+          </u>
+
+          <br>
+          <br>
+    
+          let person = { name: "Alice" };<br>
+          Object.seal(person);<br>
+          person.name = "Bob"; // This will work<br>
+          person.age = 30; // This will not work<br>
+          console.log(person); // { name: "Bob" }<br>
+        </p>
+        <br>
+        <br>
+
+        <p>
+          <b><u>8. Object.getOwnPropertyNames()</u></b>
+          <br><br>
+          - Use Case: Returns an array of all properties (enumerable or not) found directly upon a given object.
+          <br><br>
+          <u>
+            Example:
+          </u>
+          <br><br>
+    
+           let person = { name: "Alice", age: 25 };
+           <br>
+           console.log(Object.getOwnPropertyNames(person)); // ["name", "age"]
+        </p>
+
+        <p>
+          <b><u>9. Object.getPrototypeOf()</u></b>
+          <br><br>
+          - Use Case: Returns the prototype of the specified object.
+          <br><br>
+          <u>
+            Example:
+          </u>
+          <br>
+          <br>
+
+    
+            let proto = { greet: function() { console.log("Hello"); } };
+            let obj = Object.create(proto);
+            console.log(Object.getPrototypeOf(obj)); // { greet: [Function: greet] }
+        </p>
+
+        <br><br>
+
+        <p>
+          <b><u>10. Object.setPrototypeOf()</u></b>
+          <br><br>
+          - Use Case: Sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object.
+          <br><br>
+          <u>
+            Example:
+          </u>
+
+
+           let proto = { greet: function() { console.log("Hello"); } };<br>
+           let obj = {};<br>
+           Object.setPrototypeOf(obj, proto);<br>
+           obj.greet(); // Hello<br>
+        </p>
+
+
+        <h3>
+          Other Important Concepts
+        </h3>
+
+        <p>
+          1. <u>Prototype Chain:</u> In JavaScript, objects can inherit properties from other objects. This is achieved through the prototype chain. Every object has a prototype, and it can access properties and methods defined on its prototype.
+          <br>
+          2. <u>this Keyword:</u> Inside a method, `this` refers to the object that the method is a property of. It's an important concept to understand when working with methods inside objects.
+          <br>
+          3. <u>Constructor Functions:</u> These are functions used to create new objects. When called with the `new` keyword, they initialize an object and set up its prototype chain.
+          <br>
+          <br>
+          <br>
+          function Person(name, age) {<br>
+             this.name = name;<br>
+             this.age = age;<br>
+            }<br>
+            <br>
+            let person1 = new Person("Alice", 25);<br>
+            console.log(person1); // Person { name: 'Alice', age: 25 }<br>
+        </p>
+        <br>
+
+        <p>
+          Understanding JavaScript objects is fundamental to mastering the language, as they are integral to most parts of JavaScript programming. With the knowledge of objects and their methods, you can efficiently handle and manipulate data, create complex data structures, and write more organized and modular code.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="08-object.js"></script>
+</body>
+</html>
