@@ -7,7 +7,7 @@ let accountBalance = 50000
 var userName = prompt('Enter your name')
 var accountNumber = prompt('Enter your 10 digit account number')
 
-document.getElementById('greeting').innerHTML = `Welcome back ${userName}`
+document.getElementById('greeting').innerHTML = `Welcome ${userName}`
  
 document.getElementById('accNumber').innerHTML =`Your account number is ${accountNumber}` 
 
@@ -26,8 +26,14 @@ balanceBtn.addEventListener('click', function() {
 })
 
 
-var depoButton = document.getElementById('depoButton')
-depoButton.addEventListener('click', function(){
+if (!NaN && document.getElementById('userInp').value == '') {
+  let depositBtn = document.getElementById('depoButton')
+  depositBtn.disabled = true
+}else {
+
+  var depoButton = document.getElementById('depoButton')
+  
+  depoButton.addEventListener('click', function(){
   var userInpu = document.getElementById('userInp').value
   // console.log(typeof(userInpu)); //return string value
 
@@ -52,7 +58,13 @@ depoButton.addEventListener('click', function(){
   userInpu = document.getElementById('userInp').focus()
 
   showHistory()
+
+ 
 })
+}
+
+
+
 
 let withdrawBtn = document.getElementById('withdrawBtn')
 withdrawBtn.addEventListener('click', function(){
