@@ -14,13 +14,14 @@ button.addEventListener("click", () => {
   // alert(days);
   // console.log(typeof seconds);
 
+  //When you use .value to read an input field, it will always return a string value. so we are using the parseInt() function to convert the value to an integer
   seconds = parseInt(ss.value) || 0;
   minutes = parseInt(mm.value) || 0;
   hours = parseInt(hrs.value) || 0;
   days = parseInt(day.value) || 0;
   // console.log(typeof seconds); 
 
-  //if running is true, return immediately and do nothing.
+  //if running is true, return immediately and do nothing to prevent multiple interval when the start button is clicked multiple times.
   if (running) return; 
   
   //if running is false, set it to true and continue with the code below.
@@ -54,6 +55,8 @@ button.addEventListener("click", () => {
   
   }, 1000);
 
+  // console.log(timer);
+  
   button.textContent = 'Running'; //change the button text to running when the timer starts.
   paused.textContent = 'Pause'; //change the button text back from paused to pause when the timer starts.
 });
